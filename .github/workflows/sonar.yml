@@ -21,4 +21,5 @@ jobs:
           -v $(pwd):/usr/src \
           sonarsource/sonar-scanner-cli \
           sonar-scanner \
-          -Dsonar.projectKey=mi_repositorio_readme  # Reemplaza con tu Project Key
+          -Dsonar.projectKey=mi_repositorio_readme \ 
+          -X 
