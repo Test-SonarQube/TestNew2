@@ -13,7 +13,7 @@ jobs:
     - name: Run SonarQube Scanner in Docker
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Agrega tu token de SonarQube aquí
+        SONAR_TOKEN: ${{ squ_747a9e11cef21586dc7fa966651fbf482a679e01 }}  # Agrega tu token de SonarQube aquí
       run: |
         docker run --rm \
           -e SONAR_HOST_URL=http://localhost:9000 \
@@ -21,5 +21,6 @@ jobs:
           -v $(pwd):/usr/src \
           sonarsource/sonar-scanner-cli \
           sonar-scanner \
-          -Dsonar.projectKey=mi_repositorio_readme \ 
-          -X 
+          -Dsonar.projectKey=mi_repositorio_readme \  # Reemplaza con tu Project Key
+          -Dsonar.sources=. \
+          -X  # Habilitar el modo de depuración
