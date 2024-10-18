@@ -23,4 +23,4 @@ jobs:
         wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/4.8.0.2856/sonar-scanner-cli-4.8.0.2856-linux.zip
         unzip sonar-scanner-cli-4.8.0.2856-linux.zip
         cd sonar-scanner-4.8.0.2856-linux/bin
-        ./sonar-scanner -Dsonar.projectKey=<tu_project_key> -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN
+        ./sonar-scanner -Dsonar.projectKey=mi_repositorio_readme -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SONAR_TOKEN
